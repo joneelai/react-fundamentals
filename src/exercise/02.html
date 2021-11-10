@@ -27,7 +27,17 @@
     // 💰 The example in the markdown file should be a good hint for you.
     const elementProps = {id: 'element-id', children: 'Hello world!'}
     const elementType = 'h1'
-    const reactElement = React.createElement(elementType, elementProps)
+
+    const helloElement = React.createElement('span', {}, 'Hello')
+    const worldElement = React.createElement('span', {}, 'World')
+
+    const reactElement = React.createElement(
+      'div',
+      {className: 'container'},
+      helloElement,
+      ' ',
+      worldElement,
+    )
     ReactDOM.render(reactElement, rootElement)
   </script>
 </body>
